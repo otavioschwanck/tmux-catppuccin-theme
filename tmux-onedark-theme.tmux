@@ -1,12 +1,13 @@
 #!/bin/bash
-onedark_black="#282c34"
-onedark_blue="#61afef"
-onedark_yellow="#e5c07b"
-onedark_red="#e06c75"
-onedark_white="#aab2bf"
-onedark_green="#98c379"
-onedark_visual_grey="#3e4452"
-onedark_comment_grey="#5c6370"
+
+catppuccin_black="#24273a"
+catppuccin_blue="#8aadf4"
+catppuccin_yellow="#eed49f"
+catppuccin_red="#ed8796"
+catppuccin_white="#cad3f5"
+catppuccin_mouse="#c6a0f6"
+catppuccin_visual_grey="#363a4f"
+catppuccin_comment_grey="#6e738d"
 
 get() {
    local option=$1
@@ -39,50 +40,50 @@ set "status-left-length" "100"
 set "status-right-length" "100"
 set "status-right-attr" "none"
 
-set "message-fg" "$onedark_white"
-set "message-bg" "$onedark_black"
+set "message-fg" "$catppuccin_white"
+set "message-bg" "$catppuccin_black"
 
-set "message-command-fg" "$onedark_white"
-set "message-command-bg" "$onedark_black"
+set "message-command-fg" "$catppuccin_white"
+set "message-command-bg" "$catppuccin_black"
 
 set "status-attr" "none"
 set "status-left-attr" "none"
 
-setw "window-status-fg" "$onedark_black"
-setw "window-status-bg" "$onedark_black"
+setw "window-status-fg" "$catppuccin_black"
+setw "window-status-bg" "$catppuccin_black"
 setw "window-status-attr" "none"
 
-setw "window-status-activity-bg" "$onedark_black"
-setw "window-status-activity-fg" "$onedark_black"
+setw "window-status-activity-bg" "$catppuccin_black"
+setw "window-status-activity-fg" "$catppuccin_black"
 setw "window-status-activity-attr" "none"
 
 setw "window-status-separator" ""
 
-set "window-style" "fg=$onedark_comment_grey"
-set "window-active-style" "fg=$onedark_white"
+set "window-style" "fg=$catppuccin_comment_grey"
+set "window-active-style" "fg=$catppuccin_white"
 
-set "pane-border-fg" "$onedark_white"
-set "pane-border-bg" "$onedark_black"
-set "pane-active-border-fg" "$onedark_green"
-set "pane-active-border-bg" "$onedark_black"
+set "pane-border-fg" "$catppuccin_white"
+set "pane-border-bg" "$catppuccin_black"
+set "pane-active-border-fg" "$catppuccin_mouse"
+set "pane-active-border-bg" "$catppuccin_black"
 
-set "display-panes-active-colour" "$onedark_yellow"
-set "display-panes-colour" "$onedark_blue"
+set "display-panes-active-colour" "$catppuccin_yellow"
+set "display-panes-colour" "$catppuccin_blue"
 
-set "status-bg" "$onedark_black"
-set "status-fg" "$onedark_white"
+set "status-bg" "$catppuccin_black"
+set "status-fg" "$catppuccin_white"
 
-set "@prefix_highlight_fg" "$onedark_black"
-set "@prefix_highlight_bg" "$onedark_green"
-set "@prefix_highlight_copy_mode_attr" "fg=$onedark_black,bg=$onedark_green"
+set "@prefix_highlight_fg" "$catppuccin_black"
+set "@prefix_highlight_bg" "$catppuccin_mouse"
+set "@prefix_highlight_copy_mode_attr" "fg=$catppuccin_black,bg=$catppuccin_mouse"
 set "@prefix_highlight_output_prefix" "  "
 
-status_widgets=$(get "@onedark_widgets")
-time_format=$(get "@onedark_time_format" "%R")
-date_format=$(get "@onedark_date_format" "%d/%m/%Y")
+status_widgets=$(get "@catppuccin_widgets")
+time_format=$(get "@catppuccin_time_format" "%R")
+date_format=$(get "@catppuccin_date_format" "%d/%m/%Y")
 
-set "status-right" "#[fg=$onedark_white,bg=$onedark_black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$onedark_visual_grey,bg=$onedark_black]#[fg=$onedark_visual_grey,bg=$onedark_visual_grey]#[fg=$onedark_white, bg=$onedark_visual_grey]${status_widgets} #[fg=$onedark_green,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_black,bg=$onedark_green,bold] #h #[fg=$onedark_yellow, bg=$onedark_green]#[fg=$onedark_red,bg=$onedark_yellow]"
-set "status-left" "#[fg=$onedark_black,bg=$onedark_green,bold] #S #{prefix_highlight}#[fg=$onedark_green,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "status-right" "#[fg=$catppuccin_white,bg=$catppuccin_black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$catppuccin_visual_grey,bg=$catppuccin_black]"
+set "status-left" "#[fg=$catppuccin_black,bg=$catppuccin_mouse,bold] #S #{prefix_highlight}#[fg=$catppuccin_mouse,bg=$catppuccin_black,nobold,nounderscore,noitalics]"
 
-set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #W #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
-set "window-status-current-format" "#[fg=$onedark_black,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_visual_grey,nobold] #I  #W #[fg=$onedark_visual_grey,bg=$onedark_black,nobold,nounderscore,noitalics]"
+set "window-status-format" "#[fg=$catppuccin_black,bg=$catppuccin_black,nobold,nounderscore,noitalics]#[fg=$catppuccin_white,bg=$catppuccin_black] #I  #W #[fg=$catppuccin_black,bg=$catppuccin_black,nobold,nounderscore,noitalics]"
+set "window-status-current-format" "#[fg=$catppuccin_black,bg=$catppuccin_visual_grey,nobold,nounderscore,noitalics]#[fg=$catppuccin_white,bg=$catppuccin_visual_grey,nobold] #I  #W #[fg=$catppuccin_visual_grey,bg=$catppuccin_black,nobold,nounderscore,noitalics]"
